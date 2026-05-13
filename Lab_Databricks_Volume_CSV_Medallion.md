@@ -262,6 +262,15 @@ CREATE VOLUME IF NOT EXISTS landing
 COMMENT 'CSV 원본 파일 업로드용 Volume';
 ```
 
+-- 필요시 권한 부여
+GRANT READ VOLUME ON VOLUME lab_bookstore.bookstore.landing TO `user@example.com`;
+
+
+-- Volume 권한 확인
+SHOW GRANTS ON VOLUME lab_bookstore.bookstore.landing;
+
+
+
 ### 생성 확인
 
 ```sql
