@@ -380,7 +380,7 @@ bronze_books = (
     .option("header", "true")
     .option("inferSchema", "false")  # 모든 컬럼을 STRING으로
     .option("encoding", "UTF-8")
-    .load("/Volumes/lab_bookstore/bookstore/landing/books.csv")
+    .load("/Volumes/lab_bookstore/bookstore/landing/book.csv")
 )
 
 # 메타데이터 컬럼 추가 (Bronze 관례)
@@ -399,7 +399,7 @@ bronze_books = (
 )
 
 print(f"bronze_books 적재 완료: {bronze_books.count()} rows")
-bronze_books.display()
+bronze_books.show()
 ```
 
 ### 5-2. Bronze — orders
