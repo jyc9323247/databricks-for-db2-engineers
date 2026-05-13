@@ -42,7 +42,7 @@
 │  CSV 파일   │     │          Unity Catalog (Managed Tables)          │
 │ (로컬 PC)   │     │                                                  │
 │             │     │  ┌──────────┐  ┌──────────┐  ┌──────────────┐   │
-│ books.csv   │────▶│  │  Volume  │─▶│  Bronze  │─▶│    Silver    │   │
+│ books.csv   │────▶│  │  Volume  │─▶│  Bronze  │─▶│    Silver  │   │
 │ orders.csv  │     │  │ (landing)│  │ (raw)    │  │  (cleansed)  │   │
 │ customers.csv│    │  └──────────┘  └──────────┘  └──────┬───────┘   │
 └─────────────┘     │                                      │           │
@@ -207,7 +207,7 @@ C010,오예린,yerin.oh@example.com,제주,Silver,2024-02-14
 -- → 이 경우 별도 GRANT 불필요.
 
 -- 방법 2: 별도 Catalog를 만들어서 실습하는 경우
-CREATE CATALOG IF NOT EXISTS lab_bookstore;
+--CREATE CATALOG IF NOT EXISTS lab_bookstore;
 
 GRANT USE CATALOG ON CATALOG lab_bookstore TO `실습사용자@example.com`;
 GRANT CREATE SCHEMA ON CATALOG lab_bookstore TO `실습사용자@example.com`;
